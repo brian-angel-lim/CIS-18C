@@ -1,16 +1,16 @@
 public class Hexagon extends Quadrilateral  {
     public Hexagon(){
         sides = 6;
-        sideLength = new int[sides];
+        sideLength = new double[sides];
     }
 
     @Override
-    public double perimeter(int sides, int sideLength) {
+    public double perimeter(double sideLength[]) {
         return 0;
     }
 
     @Override
-    public double area(int sides, int sideLength) {
+    public double area(double sideLength[]) {
         return 0;
     }
 }
