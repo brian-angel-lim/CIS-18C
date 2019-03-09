@@ -6,7 +6,15 @@ public class Octogon extends Quadrilateral  {
 
     @Override
     public double perimeter(double sideLength[]) {
-        return 0;
+        double perimeter = 0;
+
+        for(int i = 1; i <= 8; i++)
+        {
+            perimeter += sideLength[i];
+            i++;
+        }
+
+        return perimeter;
     }
 
     @Override

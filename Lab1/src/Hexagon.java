@@ -6,8 +6,17 @@ public class Hexagon extends Quadrilateral  {
 
     @Override
     public double perimeter(double sideLength[]) {
-        return 0;
+        double perimeter = 0;
+
+        for(int i = 1; i <= 6; i++)
+        {
+            perimeter += sideLength[i];
+            i++;
+        }
+
+        return perimeter;
     }
+
 
     @Override
     public double area(double sideLength[]) {
