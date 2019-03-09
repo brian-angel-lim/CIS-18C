@@ -1,14 +1,16 @@
-public class Hexagon implements Polygon  {
-    public int sides = 6;
-    public int[] sideLength = new int[sides];
-
-    @Override
-    public double perimeter() {
-
+public class Hexagon extends Quadrilateral  {
+    public Hexagon(){
+        sides = 6;
+        sideLength = new int[sides];
     }
 
     @Override
-    public double area() {
+    public double perimeter(int sides, int sideLength) {
+        return 0;
+    }
 
+    @Override
+    public double area(int sides, int sideLength) {
+        return 0;
     }
 }

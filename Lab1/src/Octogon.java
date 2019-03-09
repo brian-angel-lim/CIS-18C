@@ -1,14 +1,16 @@
-public class Octogon implements Polygon  {
-    public int sides = 8;
-    public int[] sideLength = new int[sides];
-
-    @Override
-    public double perimeter() {
-
+public class Octogon extends Quadrilateral  {
+    public Octogon(){
+        sides = 8;
+        sideLength = new int[sides];
     }
 
     @Override
-    public double area() {
+    public double perimeter(int sides, int sideLength) {
+        return 0;
+    }
 
+    @Override
+    public double area(int sides, int sideLength) {
+        return 0;
     }
 }
