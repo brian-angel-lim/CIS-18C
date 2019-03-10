@@ -1,6 +1,11 @@
 public abstract class Triangle implements Polygon  {
-    public int sides = 3;
-    public double[] sideLength = new double[sides];
+    public int sides;
+    public double[] sideLength;
+
+    public Triangle() {
+        sides = 3;
+        sideLength = new double[sides];
+    }
 
     protected double pythagorean(double sideLength[])
     {
