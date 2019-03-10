@@ -7,6 +7,11 @@ public abstract class Triangle implements Polygon  {
         sideLength = new double[sides];
     }
 
+    public Triangle(int sides, double sideLength[]) {
+        this.sides = sides;
+        this.sideLength = sideLength;
+    }
+
     protected double pythagorean(double sideLength[])
     {
         double a = sideLength[1];

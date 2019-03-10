@@ -6,7 +6,7 @@ public class driver {
 
         shapeMenu();
     }
-    
+
     public static void shapeMenu()
     {
         System.out.println("Welcome to the Shape-O-Mattic! Please enter what shape you want to make: ");
