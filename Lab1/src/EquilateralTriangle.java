@@ -4,10 +4,8 @@ public class EquilateralTriangle extends Triangle {
         this.sideLength = sideLength;
     }
 
-    @Override
-    public double area(double sideLength[]) {
-        double h = pythagorean(sideLength);
-
-        return 0.5 * sideLength[1] * h;
+    public double perimeter(double sideLength[]) {
+        return sideLength[1] * sideLength.length;
     }
+
 }
