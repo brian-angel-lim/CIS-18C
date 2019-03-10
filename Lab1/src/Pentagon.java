@@ -4,22 +4,12 @@ public class Pentagon extends Quadrilateral  {
         sideLength = new double[sides];
     }
 
-    @Override
-    public double perimeter(double sideLength[]) {
-        double perimeter = 0;
-
-        for(int i = 1; i <= 5; i++)
-        {
-            perimeter += sideLength[i];
-            i++;
-        }
-
-        return perimeter;
-    }
-
-
+    //Assumes object is an equal pentagon
     @Override
     public double area(double sideLength[]) {
-        return 0;
+        double x = sideLength[1] * Math.sqrt(3); //apothem
+        double p = perimeter(sideLength);
+
+        return 0.5 * x * p;
     }
 }

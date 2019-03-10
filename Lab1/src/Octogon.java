@@ -5,20 +5,7 @@ public class Octogon extends Quadrilateral  {
     }
 
     @Override
-    public double perimeter(double sideLength[]) {
-        double perimeter = 0;
-
-        for(int i = 1; i <= 8; i++)
-        {
-            perimeter += sideLength[i];
-            i++;
-        }
-
-        return perimeter;
-    }
-
-    @Override
     public double area(double sideLength[]) {
-        return 0;
+        return 2 * Math.pow(sideLength[1], 2) * (1+ Math.sqrt(2)); //note - this formula assumes that the shape is a regular octogon
     }
 }

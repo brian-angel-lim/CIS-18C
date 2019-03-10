@@ -10,11 +10,6 @@ public class Square extends Quadrilateral {
     }
 
     @Override
-    public double perimeter(double sideLength[]) {
-        return sideLength[1] * sideLength.length;
-    }
-
-    @Override
     public double area(double sideLength[]) {
         return sideLength[1] * sideLength[2];
     }
