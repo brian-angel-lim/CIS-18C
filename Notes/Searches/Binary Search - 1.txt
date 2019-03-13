@@ -1,0 +1,12 @@
+//Binary Search always cuts in half
+//Binary search is O(logn)
+//Always the same data; we're just changing the low and the high points
+
+L       M       H
+A B C D E F G H I
+
+If we cant to find c, binary search cuts it in half and goes to L-M section
+
+L   M   H       
+A B C D E
+

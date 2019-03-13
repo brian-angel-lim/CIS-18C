@@ -21,4 +21,5 @@ public class driver {
         System.out.println("F. Equilateral Triangle");
         System.out.println("B. Isosceles Triangle");
     }
+
 }

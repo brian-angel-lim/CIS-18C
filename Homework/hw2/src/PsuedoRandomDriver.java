@@ -12,7 +12,7 @@ public class PsuedoRandomDriver {
         for(int i=cur; i<98;i++)
         {
             next = (a * i + b) % n;
-            System.out.println(next);
+         System.out.println(next);
         }
 
     }

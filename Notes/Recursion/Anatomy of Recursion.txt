@@ -1,0 +1,6 @@
+func(data){
+    base case //breaks the loop 
+    func(modifiedData)
+}
+
+Make sure you return your base case value, result, or the function itself (in order to be recursive)

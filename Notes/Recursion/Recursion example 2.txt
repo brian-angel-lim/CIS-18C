@@ -1,0 +1,9 @@
+//Recursive example 2
+
+public static int recursion(int x){
+    if (x > 100) {
+        return x;
+    } else {
+        return recursion(++x);
+    }
+}
