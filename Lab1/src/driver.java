@@ -5,7 +5,8 @@ public class driver {
         Scanner keyboard = new Scanner(System.in);
 
         shapeMenu();
-        char choice = getChoice();
+        String choice = getChoice();
+        choice = choice.toUpperCase();
         switchShape(choice);
     }
 
@@ -21,37 +22,37 @@ public class driver {
         System.out.println("E. Octagon");
         //Triangles
         System.out.println("F. Equilateral Triangle");
-        System.out.println("B. Isosceles Triangle");
+        System.out.println("G. Isosceles Triangle");
     }
 
-    public static char getChoice(){
+    public static String getChoice(){
         Scanner keyboard = new Scanner(System.in);
-        char choice = keyboard.next().charAt(0);
+        String choice = keyboard.next();
 
         return choice;
     }
 
-    public static void switchShape(char choice){
+    public static void switchShape(String choice){
         switch(choice) {
-            case 1:
+            case "A":
                 makeSquare();
                 break;
-            case 2:
+            case "B":
                 makeRectangle();
                 break;
-            case 3:
+            case "C":
                 makePentagon();
                 break;
-            case 4:
+            case "D":
                 makeHexagon();
                 break;
-            case 5:
+            case "E":
                 makeOctagon();
                 break;
-            case 6:
+            case "F":
                 makeEquilateral();
                 break;
-            case 7:
+            case "G":
                 makeIsosceles();
                 break;
             default:
@@ -66,11 +67,8 @@ public class driver {
         double perimeter = 0.0;
         double area = 0.0;
 
-        for (int i=1; i<= square.sideLength.length; i++) {
-            System.out.println("Please enter the length of side " + square.sideLength[i]);
-            square.sideLength[i] = keyboard.nextDouble();
-        }
-
+        System.out.println("Please enter the side length for the square");
+        square.sideLength[square.sides] = keyboard.nextDouble();
         perimeter = square.perimeter(square.sideLength);
         area = square.area(square.sideLength);
 
@@ -86,7 +84,7 @@ public class driver {
         double area = 0.0;
 
         for (int i=1; i<= rectangle.sideLength.length; i++) {
-            System.out.println("Please enter the length of side " + rectangle.sideLength[i]);
+            System.out.println("Please enter the length of side " + i);
             rectangle.sideLength[i] = keyboard.nextDouble();
         }
 
@@ -104,7 +102,7 @@ public class driver {
         double area = 0.0;
 
         for (int i=1; i<= pentagon.sideLength.length; i++) {
-            System.out.println("Please enter the length of side " + pentagon.sideLength[i]);
+            System.out.println("Please enter the length of side " + i);
             pentagon.sideLength[i] = keyboard.nextDouble();
         }
 
@@ -123,7 +121,7 @@ public class driver {
         double area = 0.0;
 
         for (int i=1; i<= hexagon.sideLength.length; i++) {
-            System.out.println("Please enter the length of side " + hexagon.sideLength[i]);
+            System.out.println("Please enter the length of side " + i);
             hexagon.sideLength[i] = keyboard.nextDouble();
         }
 
@@ -142,7 +140,7 @@ public class driver {
         double area = 0.0;
 
         for (int i=1; i<= octagon.sideLength.length; i++) {
-            System.out.println("Please enter the length of side " + octagon.sideLength[i]);
+            System.out.println("Please enter the length of side " + i);
             octagon.sideLength[i] = keyboard.nextDouble();
         }
 
@@ -161,7 +159,7 @@ public class driver {
         double area = 0.0;
 
         for (int i=1; i<= equilateral.sideLength.length; i++) {
-            System.out.println("Please enter the length of side " + equilateral.sideLength[i]);
+            System.out.println("Please enter the length of side " + i);
             equilateral.sideLength[i] = keyboard.nextDouble();
         }
 
@@ -180,7 +178,7 @@ public class driver {
         double area = 0.0;
 
         for (int i=1; i<= 2; i++) {
-            System.out.println("Please enter the length of side " + isosceles.sideLength[i]);
+            System.out.println("Please enter the length of side " + i);
             isosceles.sideLength[i] = keyboard.nextDouble();
         }
 
