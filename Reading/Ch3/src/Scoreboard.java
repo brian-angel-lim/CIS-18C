@@ -7,6 +7,7 @@ public class Scoreboard {
         board = new GameEntry[capacity];
     }
 
+    //use case - new highscore is achieved, needs to be added to Scoreboard
     public void add(GameEntry e) {
         int newScore = e.getScore();
         //is the new entry e really a high score?
@@ -45,5 +46,28 @@ public class Scoreboard {
         }
     }
 
-    
+    //use case - dirty cheater needs to get score removed
+    //Remove and return the high score at index i
+    //Should this be in GameEntry or Scoreboard??
+    public GameEntry remove(int i) throws IndexOutOfBoundsException{
+        //if i is less than 0 or greater/equal to the number of entries on the board
+        if(i < 0||i >= numEntries)
+            throw new IndexOutOfBoundsException("Invalid index: " + i);
+        GameEntry temp = board[i];                      //save the object to be removed
+        for (int j=i; j<numEntries -1;j++)              //count up from i(not down)
+            board[j] = board[j+1];                      //move one cell to the left (so shifts it left?)
+        board[numEntries - 1] = null;                   //null out the old last score
+        numEntries--;
+        return temp;                                    //return the removed object
+    }
+
+    /*
+    >Because we're moving references higher than i one cell to the left, we don't go all the way to the end of the array
+    >First, we base our loop on the number of current entries, not the capacity of the array.
+    >This is because there is no reason for shifting a series of null references that may be at the end of the array
+    >We define the loop condition, j < numEntries - 1, so that the last iteration of the loop assigns board[numEntries-1] = board[numEntries-1]
+    >There is no entry to shift into cell board[numEntries-1], so we return that cell to null just after the loop
+    >The object of the removed entry no longer has any reference pointing to it within the board array
+     */
+
 }
