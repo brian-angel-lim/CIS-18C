@@ -1,6 +1,8 @@
 //Binary Search always cuts in half
 //Binary search is O(logn)
 //Always the same data; we're just changing the low and the high points
+(data[], low, high)
+
 
 L       M       H
 A B C D E F G H I
