@@ -1,0 +1,18 @@
+=== Cesar Cipher ===
+> Type of substitution cipher
+>Takes the alphabet and shifts it over by a number of values
+>Example:
+
+(by 2 values)
+- A B C D E F G H I
+- C D E F G H I J K
+
+- HELLO (normal)
+- JGOOQ (cesar)
+
+(by 7 values)
+- A B C D E F G H I -- Alphabet - E(plainText) -> cipherText
+- H I J K L M N O P -- Shifted by 7 - D(cipherText) -> plainText
+- Wanted to say Hi, might be translated to AB
+
+- Does not offer any information security and can be broken by hand
