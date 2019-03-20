@@ -3,26 +3,32 @@ import java.util.Scanner;
 public class CipherDriver {
     public static void main(String[] args){
         Scanner keyboard = new Scanner(System.in);
-        String plainText = "";
-        String cipherText = "";
+        String plainText = " ";
+        String cipherText = " ";
         char choice = ' ';
         char again = ' ';
         int shift = 0;
 
         do {
-            System.out.println("Howdy! Welcome to the Encrypt-O-Mattic! " +
-                    "Please enter your plain text: ");
-            plainText = keyboard.next();
+            if(again == ' ') {
+                System.out.println("Howdy! Welcome to the Encrypt-O-Mattic! " +
+                        "Please enter your plain text: ");
+                plainText = keyboard.next();
+            }
+            else
+                System.out.println("Welcome back partner! " +
+                        "Please enter your plain text: ");
+                plainText = keyboard.next();
 
             System.out.println("Please enter how many values you wanna shift: ");
             shift = keyboard.nextInt();
 
-            System.out.println("Please input your preferred cipher: "
-                    + "A. Caesar"
-                    + "B. Substitution"
-                    + "C. Random");
+            System.out.println("Please input your preferred cipher:");
+            System.out.println("A. Caesar");
+            System.out.println("B. Substitution");
+            System.out.println("C. Random");
             choice = keyboard.next().charAt(0);
-            Character.toUpperCase(choice);
+            choice = Character.toUpperCase(choice);
 
             switch (choice) {
                 case 'A':
@@ -38,7 +44,7 @@ public class CipherDriver {
             System.out.println(cipherText);
             System.out.println("Do again?");
             again = keyboard.next().charAt(0);
-            Character.toUpperCase(again);
+            again = Character.toUpperCase(again);
         }while(again == 'Y');
 
     }
