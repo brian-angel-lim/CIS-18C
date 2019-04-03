@@ -39,6 +39,9 @@ public class CipherDriver {
                     break;
                 case 'C':
                     cipherText = encryptRandom(plainText, shift);
+                    break;
+                default:
+                    System.out.print("Invalid!");
             }
 
             System.out.println(cipherText);

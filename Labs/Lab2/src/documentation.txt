@@ -15,4 +15,6 @@
 - H I J K L M N O P -- Shifted by 7 - D(cipherText) -> plainText
 - Wanted to say Hi, might be translated to AB
 
-- Does not offer any information security and can be broken by hand
+> Does not offer any information security and can be broken by hand
+
+plainText -> encrypt(plainText, shift) -> cipherText
