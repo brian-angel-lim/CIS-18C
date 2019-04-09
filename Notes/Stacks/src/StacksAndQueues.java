@@ -9,5 +9,14 @@ public static void main(String[] args) {
     System.out.println(as.pop());
     System.out.println(as.pop());
     System.out.println(as.size());
+
+    ArrayQueue<Integer> hiIq = new ArrayQueue();
+    hiIq.enqueue(5);
+    hiIq.enqueue(10);
+    hiIq.enqueue(Integer.MAX_VALUE);
+    System.out.println(hiIq.dequeue());
+    System.out.println(hiIq.dequeue());
+    System.out.println(hiIq.dequeue());
+
 }
 }
