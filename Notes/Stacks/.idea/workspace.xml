@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09f28aa6-c0cc-4bd1-afde-4b1489db6351" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ArrayQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Stacks/ArrayStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Stacks/ArrayStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Stacks/IStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Stacks/IStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Stacks/StacksAndQueues.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Stacks/StacksAndQueues.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StacksAndQueues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StacksAndQueues.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/IStack.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -32,17 +26,7 @@
         <entry file="file://$PROJECT_DIR$/src/ArrayStack.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#133#134#0" expanded="true" />
-                <element signature="e#176#177#0" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#258#259#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-              </folding>
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -59,14 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ArrayQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="272">
               <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-              <folding>
-                <element signature="e#184#185#0" expanded="true" />
-                <element signature="e#225#226#0" expanded="true" />
-                <element signature="e#204#205#0" expanded="true" />
-                <element signature="e#245#246#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -140,7 +118,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554264711903" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554264712893" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -180,16 +158,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554261532282</updated>
-      <workItem from="1554261533553" duration="3159000" />
+      <workItem from="1554261533553" duration="3319000" />
+      <workItem from="1557277976139" duration="57000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3159000" />
+    <option name="totallyTimeSpent" value="3376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -197,7 +175,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Learn" order="4" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.24983211" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.25319007" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -207,7 +185,7 @@
       <window_info anchor="bottom" id="Terminal" order="5" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.32905984" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -234,40 +212,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IQueue.java">
+    <entry file="file://$PROJECT_DIR$/src/ArrayStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ArrayQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="272">
           <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding>
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ArrayStack.java">
+    <entry file="file://$PROJECT_DIR$/src/IQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#133#134#0" expanded="true" />
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
         </state>
       </provider>
     </entry>
