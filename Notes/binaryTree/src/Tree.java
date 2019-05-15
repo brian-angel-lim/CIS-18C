@@ -12,10 +12,18 @@ public class Tree<T extends Comparable>{
 
     public TreeNode search(TreeNode n, T termTosearch) {
         // if node is null, return null
+        if (n == null)
+            return null;
         // if term to search is in n, return n
+        if (n == termTosearch)
+            return n;
         // if termToSearch is less than value at n, search left
+        if (termTosearch < n)
+            return search(n.left, termTosearch);
         // if termToSearch is greater than value at n, search right
+            return search(n.right, termTosearch);
     }
+
     //prints all of the nodes of the tree using in-order traversal
     public void printInOrder(TreeNode n){
         if (n == null) {
