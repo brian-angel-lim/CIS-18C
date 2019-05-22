@@ -12,7 +12,7 @@ public class StudyRoom {
         this.isVacant = isVacant;
     }
 
-    public void displayVanacy() {
+    public void displayVacancy() {
         if(isVacant = true)
             System.out.println("Study Room " + room + ": Vacant");
         else
