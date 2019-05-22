@@ -1,2 +1,2 @@
-public class RandomCipher {
+public class RandomCipher extends SubstitutionCipher {
 }

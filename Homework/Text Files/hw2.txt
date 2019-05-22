@@ -27,47 +27,189 @@ public class PsuedoRandomDriver {
     }
 }
 
+======================================================================
 
 R-3.2: Write a Java method that repeatedly selects and removes
 a random entry from an array until the array holds no more entires
+A-3.2:
+public static void remove(int[] myArray) {
+    Random rand = new Random();
+
+    for(int i =0; i < myArray.length; i++) {
+        int del = rand.nextInt(myArray.length-i);
+
+        for(int j = del; j < a.length-i-1; j++) {
+            a[j] = a[j+1];
+        }
+        a[a.length-i-1] = 0;
+    }
+}
+
+======================================================================
 
 R-3.3: Explain the changes that would have to be made to the program
 of Code Fragment 3.8 so that it could perform the Caesar cipher for messages
 that are written in an alphabet-based language other than English, such as Greek,
 Russian, or Hebrew
+A-3.3: First we should identify the things in our code that are only exclusive to the
+English alphabetical family. For example, we set our for loops to end when the index reaches 26;
+the final letter of the english alphabet. The encoder and decoder arrays also use 'A' which is a
+character that is not present in all other languages. 
+
+======================================================================
 
 R-3.4: The TicTacToe class of Code Fragments 3.9 and 3.10 has a flaw, in that
 it allows a player to place a mark even after the game has already been won by
 someone.
 modify the class so that the putMark method throws an illegalStateException in that
 case.
+A-3.4: 
+Code:
+public void putMark(int i, int j) throws IllegalArgumentException{
+    if ((i < 0) || (i > 2) || (j < 0) || (j > 2))
+        throw new IllegalArgumentException("Invalid board position");
+    if (board[i][j] != EMPTY)
+        throw new IllegalArgumentException("Board position occupied");
+    if (isWin(1))
+        throw new IllegalArgumentException("Player 1 has already won");
+    if (isWin(-1))
+        throw new IllegalArgumentException("Player 2 has already won");
+    board[i][j] = player; 
+    player = -player; 
+}
 
-R-3.5 The removeFirst method of the SinglyLinkedList class includes a special case to 
+
+======================================================================
+
+R-3.5: The removeFirst method of the SinglyLinkedList class includes a special case to 
 reset the tail field to null when deleting the last node of a list (see lines 51 and 51 of 
 Code Fragment 3.15).
 
 What are the consequences if we were to remove those two lines from the code? Explain why the
 class would or would not work with such a modification.
 
-R-3.6 Give an algorithm for ifnding the second-to-last node in a singly linked list in which the
+A-3.5: The tail would point to a node, even though it's null. The class would still functions, 
+since all the methods would still work regardless of the presence of the last two lines.
+
+======================================================================
+
+R-3.6: Give an algorithm for finding the second-to-last node in a singly linked list in which the
 last node is indicated by a null next reference.
 
-R-3.7 Consider the implementation of CircularlyLinkedList.addFirst, in Code Fragment 3.16. The else
+A-3.6:
+
+void printSecondFromLast() 
+    { 
+        Node temp = head; 
+        if(temp == null) {
+            System.out.println("No node in linked list");
+        }
+        else if(temp.next == null) {
+            System.out.println("only one node in linked list");
+        }
+        else{
+            while (temp.next.next != null) { 
+                temp = temp.next; 
+            } 
+            System.out.println(temp.data); 
+        }
+    } 
+
+======================================================================
+
+R-3.7: Consider the implementation of CircularlyLinkedList.addFirst, in Code Fragment 3.16. The else
 body at lines 39 and 40 of that method relies on a locally declarable variable, newest. Redesign that clause
 to avoid use of any local variable
 
-R-3.8 Describe a method for finding the middle node a doubly linked list with header and trailer
+A-3.7: 
+public void addFirst(E e) {
+    if (size == 0) {
+        tail = new Node<>(e, null);
+        tail.setNext(tail);
+    } else {
+        tail.setNext(new Node<>(e, tail.getNext()));
+    }
+    size++;
+}
+======================================================================
+
+R-3.8: Describe a method for finding the middle node a doubly linked list with header and trailer
 sentinels by "link hopping," and without relying on explicit knowledge of the size of the list. In the case of
 an even number of nodes, report the node slightly left of center as the "middle". What is the running time of this method?
 
-R-3.9 give the implementation of the size() method for the SingularlyLinkedList class,
+A-3.8: The algorithm approaches the center of the DoublyLinkedList from both ends (header & tailer) at an equal rate.
+Is the quantity of elements is odd, the header and tailer would meet at the center.
+In the case of the quantity of elements being even, they cross each other, so instead we check if the header and tailer aren't
+next to each other.
+
+The time complexity is O(n).
+======================================================================
+
+R-3.9: Give the implementation of the size() method for the SingularlyLinkedList class,
 assuming that we did not maintian size as an instance variable.
 
-R-3.10 Give an implementation of the size() method for the CircularlyLinkedList class, 
+A-3.9: 
+public int size() {
+    Node<E> temp = new Node<>(0, head); 
+    int result = 0;
+    while(temp.getNext() != null) {
+        result++;
+        temp = temp.getNext();
+    }
+    return result;
+}
+======================================================================
+
+R-3.10: Give an implementation of the size() method for the CircularlyLinkedList class, 
 assuming that we did not maintain size as an instance variable.
 
-R-3.11 Give an implementation of the size() method for the DoublyLinkedList class,
+a-3.11:
+public int size() {
+    int result = 0;
+    
+    if(tail != null) {
+        Node<E> temp = new Node<>(0, tail.getNext()); //dummy temp node that points towards head
+        while(temp != tail) {
+            result++;
+            tempt = temp.getNext();
+        }
+    }
+    return result;
+}
+======================================================================
+
+R-3.11: Give an implementation of the size() method for the DoublyLinkedList class,
 assuming that we did not maintain size as an instance variable.
 
-R-3.12 Implement a rotate() method in the SinglyLinkedList class, 
+A-3.11: 
+public int size() {
+    int count = 0;
+    Node<E> temp = new Node<>(0, null, header); //dummy temp node whose next element is head
+
+    while (temp.getNext() != null) {
+        count++;
+        temp = temp.getNext();
+    }
+    return count;
+}
+======================================================================
+
+R-3.12: Implement a rotate() method in the SinglyLinkedList class, 
 which has semantics equal to addLast(removeFirst()). Yet without creating any new node. 
+
+A-3.12: 
+public void rotate(int k) {
+    if (size > 1 && k > 0) {
+        for(int i = 1; 1 <=k; i++) {
+            addLast(removeFirst());
+        }
+    }
+}
+
+======================================================================
+
+R-3.13: What is the difference between a shallow equality test and a deep equality test between two Java arrays, Aand B, if they are one-dimensional arrays of type int? 
+What if the arrays are two-dimensional arrays of type int?
+
+A-3.13: 
+In a deep equality test, you can compared nested arrays that can be either 2D, 3D, 4D, etc. whereas in shalllow equality test you cant. 

@@ -1,0 +1,79 @@
+R5.1, R5.3-5.10
+
+R.5.1 - Describe a recursive method that returns the maximum element in an array. What is the running time and space usage?
+A.5.1 - 
+returnMax(int[] A, int n) {
+    if (n==1)
+        return A[0];
+    else
+        return max(A[n-1], function(A, n-1));
+}
+
+Running Time: O(n)
+Space Usage: O(n)
+
+========================================================================================================================================================================
+
+R.5.3 - Draw the recursive trace for the computation of power(2,5), using the traditional algorithm implemented in Code Fragment 5.8
+A.5.3 - power(2,5) -[return 32]-> power(2,4) -[returns 16]-> power(2,3) -[returns 8]-> power(2,2) -[returns 4]-> power(2,1) -[returs 1]-> power(2, 0)
+
+========================================================================================================================================================================
+
+R.5.4 - Draw the recursion trace for the computation of power(2,18), using the repeated squaring algorithm, as implemented in Code Fragment 5.9
+A.5.4 - power(2,18) -[return 262144]-> power(2,5) -[returns 512]-> power(2,4) -[returns 16]-> power(2,2) -[returns 4]-> power(2,1) -[returs 2]-> power(2, 0) -[returns 1]
+
+========================================================================================================================================================================
+
+R.5.7 - Describe the recursive algorithm for computing the nth Harmonic Number
+A.5.7 - 
+public static double harmonic(int n) {
+    if (n == 1)
+        return 1;
+    else 
+        return (double)(1/(double)n) + harmonic(n - 1);
+}
+
+========================================================================================================================================================================
+
+R.5.8 - Describe a recursive algorithm for converting a string of digits into the integer itrepresents. For example,'13531'represents the integer 13,531.
+A.5.8. - 
+public static int number(String numStr, int prev) {
+    if(numStr.length()==1)
+        return 10 * prev + ((int)numStr.charAt(0) - (int)"0".charAt(0));
+    else
+        return number(numStr.substring(1), 10 * prev + ((int)numStr.charAt(0) - (int)"0".charAt()));
+}
+
+========================================================================================================================================================================
+
+R.5.9 - Develop a nonrecursive implementation of the version of the power method from Code Fradment 5.9 that uses repeated squaring
+A.5.9 - 
+public static double power(double x, int n) {
+    double product = 1;
+    double k = x;
+
+    while(n > 0) {
+        if (n%2 == 1) 
+            result *= k;
+        k = k*k;
+        n = n/2
+    }
+    return product;
+}
+
+========================================================================================================================================================================
+
+R.5.10 - Describe a way to use recursion to compute the sum of all the elements in an n x n array of integers
+A.5.10 -
+
+public static int sum(int[][] data, int x, int n1, int y, int n2) {
+
+    if (n1 == 1 && n2 == 1) {
+        return data[x][y];
+    }
+    if (n1 == 1) {
+        return sum(data, x, n1, y, (n2 / 2)) + sum(data, x, n1, y + (n2 / 2), n2 - (n2 / 2));
+    } else {
+        return sum(data, x, (n1 / 2), y, n2) + sum(data, x + (n1 / 2), n1 - (n1 / 2), y, n2);
+    }
+}

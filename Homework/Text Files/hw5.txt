@@ -1,0 +1,221 @@
+R6.1-R6.14
+
+R6.1: Suppose an initially empty stack S has performed a total of 25 push operations, 12 top operations, and 10 pop operations, 3 of which returned null to indicate an empty stack. What is the current size of S?
+A6.1: 18
+
+=========================================================================================================================================================================
+
+R6.2: Had the stack of the previous problem been an instance of theArrayStackclass,from Code  Fragment 6.2,  what would  be  the  final value  of  the  instance  vari-ablet?
+A6.2: 17
+
+=========================================================================================================================================================================
+
+R6.3: What values are returned during the following series of stack operations, if exe-cuted upon an initially empty stack?push(5),push(3),pop(),push(2),push(8),pop(),pop(),push(9),push(1),pop(),push(7),push(6),pop(),pop(),push(4),pop(),pop().
+A6.3: 
+Return values for operations:
+push(5)
+push(3)
+pop() - 3
+push(2)
+push(8)
+pop() - 8
+pop() - 2
+push(9)
+push(1)
+pop() - 1
+push(7)
+push(6)
+pop() - 6
+pop() - 7
+push(4)
+pop() - 4
+pop() - 9
+
+
+=========================================================================================================================================================================
+
+R6.4: Implement a  method  with  signaturetransfer(S,T)that  transfers  all  elementsfrom stackSonto stackT, so that the element that starts at the top ofSis the firstto be inserted ontoT, and the element at the bottom ofSends up at the top ofT.
+A6.4: 
+
+void transfer(Stack S, Stack T) {
+    int size = S.size();
+    for(int i = 0; i < size; i++) {
+        T.push(S.pop());
+    }
+}
+
+=========================================================================================================================================================================
+
+R6.5: Give a recursive method for removing all the elements from a stack.
+A6.5: 
+
+public void removeAll() {
+    if(!stick.isEmpty()){
+        return;
+    }
+    else {
+    stack.pop();
+    removeAll();
+    }
+
+}
+
+=========================================================================================================================================================================
+R6.6: Give a precise and complete definition of the concept of matching for groupingsymbols in an arithmetic expression. Your definition may be recursive.
+A6.6: 
+
+=========================================================================================================================================================================
+
+R6.7: Suppose an initially empty queueQhas performed a total of 32enqueueopera-tions, 10firstoperations, and 15dequeueoperations, 5 of which returnednulltoindicate an empty queue. What is the current size ofQ?
+A6.7: 22
+
+=========================================================================================================================================================================
+
+R6.8: Had the queue of the previous problem been an instance of theArrayQueueclass,from Code Fragment 6.10, with capacity 30 never exceeded, what would be thefinal value of the instance variablef?
+A6.8: 9
+
+=========================================================================================================================================================================
+
+R6.9: What values are returned during the following sequence of queue operations, ifexecuted  on  an  initially  empty  queue?enqueue(5),enqueue(3),dequeue(),enqueue(2),enqueue(8),dequeue(),dequeue(),enqueue(9),enqueue(1),dequeue(),enqueue(7),enqueue(6),dequeue(),dequeue(),enqueue(4),dequeue(),dequeue().
+A6.9:
+enqueue(5)
+enqueue(3)
+dequeue() - 5
+enqueue(2)
+enqueue(8)
+dequeue() - 3
+dequeue() - 2
+enqueue(9)
+enqueue(1)
+dequeue() - 8
+enqueue(7)
+enqueue(6)
+dequeue() - 9
+dequeue() - 1
+enqueue(4)
+dequeue() - 7
+dequeue() - 6
+
+=========================================================================================================================================================================
+
+R6.10: Give a simple adapter that implements the stack ADT while using an instance ofa deque for storage.
+A6.10: 
+
+public class DequeStack<E> implements Stack<E> {
+    private Deque<E> deque = new Deque<>();
+    public DequeStack() {}
+
+    public int size() {
+        return deque.size();
+    }
+
+    public boolean isEmpty() {
+        return deque.isEmpty();
+    }
+
+    public void push(E element) {
+        deque.addFirst(element);
+    }
+
+    public E top() {
+        return deque.first();
+    }
+
+    public E pop() {
+        return deque.removeFirst();
+    }
+
+}
+
+=========================================================================================================================================================================
+
+R6.11: Give a simple adapter that implements the queue ADT while using an instanceof a deque for storage
+A6.11:
+
+public class DequeQueue<E> implements Queue<E> {
+    private Deque<E> deque = new Deque<>();
+    public DequeQueue() {}
+
+    public int size() {
+        return deque.size();
+    }
+
+    public boolean isEmpty() {
+        return deque.isEmpty();
+    }
+
+    public void push(E element) {
+        deque.addFirst(element);
+    }
+
+    public E top() {
+        return deque.first();
+    }
+
+    public E pop() {
+        return deque.removeFirst();
+    }
+
+}
+
+=========================================================================================================================================================================
+
+R6.12: What   values  are  returned  during  the  following  sequence  of  deque  ADToperations, on an initially empty deque?addFirst(3),addLast(8),addLast(9),addFirst(1),last(),isEmpty(),addFirst(2),removeLast(),addLast(7),first(),last(),addLast(4),size(),removeFirst(),removeFirst().
+A6.12:
+
+addFirst(3)
+addLast(8)
+addLast(9)
+addFirst(1)
+last() - 9
+isEmpty() - false
+addFirst(2)
+removeLast() - 9
+addLast(7)
+first() - 2
+last() - 7
+addLast(4)
+size() - 6
+removeFirst() - 2
+removeFirst() - 1
+
+=========================================================================================================================================================================
+
+R6.13: Suppose you have a dequeDcontaining the numbers(1,2,3,4,5,6,7,8), in thisorder.  Suppose further that you have an initially empty queueQ.  Give a codefragment that uses onlyDandQ(and no other variables) and results inDstoringthe elements in the order(1,2,3,5,4,6,7,8).
+A6.13:
+
+D.addLast(D.removeFirst());
+D.addLast(D.removeFirst());
+D.addLast(D.removeFirst());
+Q.enqueue(D.removeFirst());
+D.addLast(D.removeFirst());
+D.addLast(Q.dequeue());
+D.addLast(D.removeFirst());
+D.addLast(D.removeFirst());
+D.addLast(D.removeFirst());
+
+for(int i=0;i<8;i++) {
+    Q.enqueue(D.removeFirst())
+}
+
+//Result: D is empty, Q is 1 2 3 4 5 6 7 8
+=========================================================================================================================================================================
+
+R6.14: Repeat the previous problem using the dequeDand an initially empty stackS
+A6.14: 
+
+D.addLast(D.removeFirst());
+D.addLast(D.removeFirst());
+D.addLast(D.removeFirst());
+S.push(D.removeFirst());
+D.addLast(D.removeFirst());
+D.addLast(S.pop());
+D.addLast(D.removeFirst());
+D.addLast(D.removeFirst());
+D.addLast(D.removeFirst());
+
+for(int i=0;i<8;i++) {
+    S.push(D.removeFirst())
+}
+
+//result: D is empty, S is 1 2 3 4 5 6 7 8

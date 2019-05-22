@@ -1,0 +1,60 @@
+R4.2-R4.13
+
+R4.2: The number of operations executed by algorithms A and B is 8nlogn and 2n2, respectively. Determinen 0 such that A is better than B for n ≥ n0.
+A4.2: n = 16
+
+============================================================================
+
+R4.3: The number of operations executed by algorithms A and B is 40n2 and 2n3, respectively. Determinen 0 such that A is better than B for n≥n0
+A4.3: n = 20
+
+===========================================================================
+
+R4.4: Give an example of a function that is plotted the same on a log-log scale as it ison a standard scale.
+A4.4: f(x) = x
+
+=============================================================================
+
+R4.5: Explain why the plot of the function n^c is a straight line with slope c on a log-logscale.
+A4.5: y = clogn
+
+=============================================================================
+
+R4.6: What is the sum of all the even numbers from 0 to 2n, for any integer n >= 1?
+A4.6: n(n+1)/2
+
+=============================================================================
+
+R4.7: Show that the runtime of algorithm A is always O(F(N)) is equivilent to the worst case of algorithm A being O(f(n))
+A4.7: Big O notation gives the urnning time of the upper bound on a function f(n). Therefor, accoridng
+to Big O notation, the running time of algorithm A for every input is the same as the running time for it's worst case scenario
+
+=============================================================================
+
+R4.8: Order functions by asymptotic growth rate 
+A4.8: 2^10 < 2^(logn) < 4nlogn+2n
+
+=============================================================================
+
+R4.9: Give a big-O characterization, in terms of n, of the running time of the example1 method shown in Code Fragment 4.12.
+A4.9: O(n)
+
+=============================================================================
+
+R4.10: ditto but with example 2
+A4.10: O(n)
+
+=============================================================================
+
+R4.11: example 3
+A4.11: O(n^2)
+
+=============================================================================
+
+R4.12: example 4
+A4.12: O(n)
+
+=============================================================================
+
+R4.13: example 5
+A4.13: O(n^3)
